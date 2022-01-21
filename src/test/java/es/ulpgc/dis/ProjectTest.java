@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import static es.ulpgc.dis.Project.getWorkLoadProjects;
 import static org.junit.Assert.assertEquals;
 
 public class ProjectTest {
@@ -62,14 +63,7 @@ public class ProjectTest {
         projects.add(projectA);
         projects.add(projectB);
 
-        List<ProjectManager> projectManagerList = new ArrayList<ProjectManager>();
-        projectManagerList.add(projectManager0);
-        projectManagerList.add(projectManager1);
-
-        Project auxProject = new Project("auxProject", null);
-
-        Map<String, Integer> workLoadProjects = auxProject.getWorkLoadProjects(projects);
-
+        Map<String, Integer> workLoadProjects = getWorkLoadProjects(projects);
 
         assertEquals(5175, (int) workLoadProjects.get("Project A"));
         assertEquals(4275, (int) workLoadProjects.get("Project B"));

@@ -11,7 +11,7 @@ public class Project {
         this.projectManager = projectManager;
     }
 
-    public Map<String, Integer> getWorkLoadProjects(List<Project> projects) {
+    public static Map<String, Integer> getWorkLoadProjects(List<Project> projects) {
         Map<String, Integer> workLoadProjects = new HashMap<String, Integer>();
         for (Project project: projects) {
             int workLoad = 0;
