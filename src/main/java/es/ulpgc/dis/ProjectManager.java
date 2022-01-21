@@ -8,11 +8,18 @@ public class ProjectManager {
     private String lastName;
 
     private List<Developer> managedTeam;
-
-    public int workLoad;
+    private int workLoad;
 
     public ProjectManager() {
         this.managedTeam = new ArrayList<Developer>();
+    }
+
+    public int getWorkLoad() {
+        return workLoad;
+    }
+
+    public void setWorkLoad(int workLoad) {
+        this.workLoad = workLoad;
     }
 
     public void setFirstName(String firstName) {

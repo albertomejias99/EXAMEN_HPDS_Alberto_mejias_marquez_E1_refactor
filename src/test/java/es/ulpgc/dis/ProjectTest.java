@@ -42,7 +42,7 @@ public class ProjectTest {
         developer4.projects.add(projectB);
 
 
-        projectManager0.workLoad = 1800; // full time in one project
+        projectManager0.setWorkLoad(1800); // full time in one project
         projectManager0.setFirstName("James");
         projectManager0.setLastName("Johnson");
         projectManager0.addManagedDeveloper(developer0);
@@ -50,7 +50,7 @@ public class ProjectTest {
         projectManager0.addManagedDeveloper(developer2);
 
 
-        projectManager1.workLoad = (int) (1800.0 * 0.5); // part time 50% in one project
+        projectManager1.setWorkLoad((int) (1800.0 * 0.5)); // part time 50% in one project
         projectManager1.setFirstName("Isabella");
         projectManager1.setLastName("Smith");
         projectManager1.addManagedDeveloper(developer0);
@@ -68,7 +68,7 @@ public class ProjectTest {
 
         Project auxProject = new Project("auxProject", null);
 
-        Map<String, Integer> workLoadProjects = auxProject.getWorkLoadProjects(projects, projectManagerList);
+        Map<String, Integer> workLoadProjects = auxProject.getWorkLoadProjects(projects);
 
 
         assertEquals(5175, (int) workLoadProjects.get("Project A"));
