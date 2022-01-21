@@ -6,8 +6,8 @@ import java.util.List;
 public class Developer {
     private final String firstName;
     private final String lastName;
-    public List<Project> projects;
-    public int workLoad;
+    private List<Project> projects;
+    private int workLoad;
 
     public Developer(String firstName, String lastName) {
         this.firstName = firstName;
@@ -23,5 +23,23 @@ public class Developer {
         return lastName;
     }
 
+    public List<Project> getProjects() {
+        return projects;
+    }
 
+    public void setProjects(List<Project> projects) {
+        this.projects = projects;
+    }
+
+    public int getWorkLoad() {
+        return workLoad;
+    }
+
+    public void setWorkLoad(int workLoad) {
+        this.workLoad = workLoad;
+    }
+
+    public void addProject(Project project){
+        this.projects.add(project);
+    }
 }

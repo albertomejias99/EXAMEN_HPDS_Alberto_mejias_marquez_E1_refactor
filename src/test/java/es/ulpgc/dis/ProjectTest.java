@@ -20,26 +20,26 @@ public class ProjectTest {
         Project projectB = new Project("Project B", projectManager1);
 
         Developer developer0 = new Developer("Jessica", "Jones");
-        developer0.workLoad = (int) (1800.0 * 0.75 * 0.5); // part time 75% in two projects
-        developer0.projects.add(projectA);
-        developer0.projects.add(projectB);
+        developer0.setWorkLoad((int) (1800.0 * 0.75 * 0.5)); // part time 75% in two projects
+        developer0.addProject(projectA);
+        developer0.addProject(projectB);
 
         Developer developer1 = new Developer("Charlie", "Taylor");
-        developer1.workLoad = 1800; // full time in one project
-        developer1.projects.add(projectA);
+        developer1.setWorkLoad(1800); // full time in one project
+        developer1.addProject(projectA);
 
         Developer developer2 = new Developer("William", "Brown");
-        developer2.workLoad = (int) (1800.0 * 0.5); // full time in two projects
-        developer2.projects.add(projectA);
-        developer2.projects.add(projectB);
+        developer2.setWorkLoad((int) (1800.0 * 0.5)); // full time in two projects
+        developer2.addProject(projectA);
+        developer2.addProject(projectB);
 
         Developer developer3 = new Developer("Sophie", "Wilson");
-        developer3.workLoad = (int) (1800.0 * 0.5); // part time 50%
-        developer3.projects.add(projectB);
+        developer3.setWorkLoad((int) (1800.0 * 0.5)); // part time 50%
+        developer3.addProject(projectB);
 
         Developer developer4 = new Developer("Emily", "Yhomas");
-        developer4.workLoad = (int) (1800.0 * 0.5); // part time 50% in one project
-        developer4.projects.add(projectB);
+        developer4.setWorkLoad((int) (1800.0 * 0.5)); // part time 50% in one project
+        developer4.addProject(projectB);
 
 
         projectManager0.setWorkLoad(1800); // full time in one project
